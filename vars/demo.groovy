@@ -1,3 +1,7 @@
+def loadConfig() {
+    return load 'config.groovy'
+}
+
 def clone(Map config) {
     def repoUrl = config.REPO_URL
     sh "git clone ${repoUrl}"
