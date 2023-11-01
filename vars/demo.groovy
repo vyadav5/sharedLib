@@ -3,7 +3,8 @@ import groovy.json.JsonSlurper
 
 def clone(Map config) {
     def configFile = readFile('resources/config.json')
-    def config = new JsonSlurper().parseText(configFile)
+    def parsedConfig = new JsonSlurper().parseText(configFile)
+
 
     def repoUrl = config.REPO_URL
     sh "git clone ${repoUrl}"
