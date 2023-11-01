@@ -1,8 +1,10 @@
-def loadConfig() {
-    return load 'config.groovy'
-}
+@Grab('org.json:json:20210307')
+import groovy.json.JsonSlurper
 
 def clone(Map config) {
+    def configFile = readFile('resources/config.json')
+    def config = new JsonSlurper().parseText(configFile)
+
     def repoUrl = config.REPO_URL
     sh "git clone ${repoUrl}"
 }
