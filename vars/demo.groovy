@@ -1,5 +1,4 @@
 def cloneProjectRepo(repoUrl) {
-    sh "git clone ${repoUrl}"
+    sh "git clone https://github.com/vyadav5/ansible-newRelic.git"
 }
 
-def repoUrl = 'https://github.com/vyadav5/ansible-newRelic.git' 
