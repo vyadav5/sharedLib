@@ -1,8 +1,0 @@
-{
-    "REPO_URL": "https://github.com/vyadav5/ansible-newRelic.git",
-    "SLACK_CHANNEL_NAME": "build-status",
-    "ENVIRONMENT": "prod",
-    "CODE_BASE_PATH": "env/prod",
-    "ACTION_MESSAGE": "Your message here",
-    "KEEP_APPROVAL_STAGE": true
-}
