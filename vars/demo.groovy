@@ -1,18 +1,19 @@
-def clone(String repoUrl) {
+def cloneWithConfig(Map config) {
+    def repoUrl = config.REPO_URL
     sh "git clone ${repoUrl}"
 }
 
-def call(Map params) {
+// def call(Map params) {
     
-    def approvalRequired = params.KEEP_APPROVAL_STAGE ?: "true"
+//     def approvalRequired = params.KEEP_APPROVAL_STAGE ?: "true"
 
-    if (approvalRequired == "true") {
-        echo "Approval stage is required."
+//     if (approvalRequired == "true") {
+//         echo "Approval stage is required."
         
-    } else {
-        echo "Skipping approval stage."
-    }
-}
+//     } else {
+//         echo "Skipping approval stage."
+//     }
+// }
 
 // def approve(Map config) {
 //     timeout() {
