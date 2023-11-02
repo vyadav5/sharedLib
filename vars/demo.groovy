@@ -15,7 +15,7 @@ def call(Map params) {
 }
 
 // def approve(Map config) {
-//     timeout(time: 30, unit: 'MINUTES') {
+//     timeout() {
       
 //         def userInput = input(
 //             id: 'userInput',
