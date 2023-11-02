@@ -1,5 +1,6 @@
+// vars/demo.groovy
 def call() {
-    def config = load('config')
+    def config = load("${JENKINS_HOME}/jobs/${JOB_NAME}/workspace/config")
 
     // Access and print the configuration settings
     echo "SLACK_CHANNEL_NAME: ${config.SLACK_CHANNEL_NAME}"
