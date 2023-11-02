@@ -1,11 +1,12 @@
-def config = load('config')
+def call() {
+    def config = load('config')
 
-// Access and print the configuration settings
-echo "SLACK_CHANNEL_NAME: ${config.SLACK_CHANNEL_NAME}"
-echo "ENVIRONMENT: ${config.ENVIRONMENT}"
-echo "CODE_BASE_PATH: ${config.CODE_BASE_PATH}"
-echo "KEEP_APPROVAL_STAGE: ${config.KEEP_APPROVAL_STAGE}"
-
+    // Access and print the configuration settings
+    echo "SLACK_CHANNEL_NAME: ${config.SLACK_CHANNEL_NAME}"
+    echo "ENVIRONMENT: ${config.ENVIRONMENT}"
+    echo "CODE_BASE_PATH: ${config.CODE_BASE_PATH}"
+    echo "KEEP_APPROVAL_STAGE: ${config.KEEP_APPROVAL_STAGE}"
+}
 
 
 // @Grab('org.json:json:20210307')
