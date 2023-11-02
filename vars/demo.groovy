@@ -3,12 +3,12 @@ def clone(String repoUrl) {
 }
 
 def call(Map params) {
-    // You can access the KEEP_APPROVAL_STAGE parameter from the Jenkinsfile
+    
     def approvalRequired = params.KEEP_APPROVAL_STAGE ?: "true"
 
     if (approvalRequired == "true") {
         echo "Approval stage is required."
-        // Add your approval stage logic here
+        
     } else {
         echo "Skipping approval stage."
     }
