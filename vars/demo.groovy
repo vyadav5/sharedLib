@@ -1,5 +1,5 @@
 // vars/demo.groovy
-def call() {
+def call(map config) {
     def config = load 'config'
 
     // Access and print the configuration settings
