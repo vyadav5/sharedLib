@@ -1,6 +1,6 @@
 // vars/demo.groovy
 def call() {
-    def config = libraryResource("resource/config.txt").read()
+    def config = libraryResource("resources/config.txt").read()
 
     // Access and print the configuration settings
     echo "SLACK_CHANNEL_NAME: ${config.SLACK_CHANNEL_NAME}"
