@@ -3,33 +3,14 @@ def clone(Map config) {
     sh "git clone ${repoUrl}"
 }
 
-// def call(Map params) {
-    
-//     def approvalRequired = params.KEEP_APPROVAL_STAGE ?: "true"
+def approvalStage(Map config) {
+    def keepApprovalStage = config.KEEP_APPROVAL_STAGE ?: "false"  // set default value to false if null
 
-//     if (approvalRequired == "true") {
-//         echo "Approval stage is required."
-        
-//     } else {
-//         echo "Skipping approval stage."
-//     }
-// }
-
-// def approve(Map config) {
-//     timeout() {
-      
-//         def userInput = input(
-//             id: 'userInput',
-//             message: 'Do you want to proceed with the build?',
-//             parameters: [choice(name: 'APPROVE', choices: 'Approve\nReject', description: 'Choose approval status')]
-//         )
-
-      
-//         if (userInput == 'Approve') {
-//             echo 'User approved the build.'
-          
-//         } else {
-//             error('User rejected the build.')
-//         }
-//     }
-// }
+    if (keepApprovalStage == "true") {
+        echo "Approval stage is enabled."
+        echo 'Build approved.'
+        return true
+    } else {
+        echo 'Approval stage is disabled. Proceeding with the build.'
+        return true
+    }
