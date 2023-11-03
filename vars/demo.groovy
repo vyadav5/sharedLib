@@ -1,3 +1,8 @@
+def setupCommonConfig() {
+    def configFile = readFile('config')
+    return readYaml text: configFile
+}
+
 def clone(Map config) {
     def repoUrl = config.REPO_URL
     sh "git clone ${repoUrl}"
