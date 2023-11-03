@@ -12,5 +12,7 @@ def approvalStage(Map config) {
         return true
     } else {
         echo 'Approval stage is disabled. Proceeding with the build.'
-        return true
+        return false
     }
+}
+
